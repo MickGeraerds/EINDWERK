@@ -1,0 +1,443 @@
+html {
+    height: 100%;
+}
+.clearfix::after {
+	overflow: hidden;
+	width: 100%;
+}
+body { 
+    background-color: #151515;
+    height: 100%;
+    width: 100%;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+}
+.thumb {
+    background-color: #515151;
+}
+
+#game {
+    position: relative;
+    width: 100%;
+    height: calc(100% - 50px);
+}
+#charPanel, #mobPanel, #combatPanel{
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    display:inline-block;
+    width: 16.66%;
+    height: calc(100% - 16.66%);
+}
+#menuPanel {
+    position: absolute;
+    bottom: 0px;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    height: 16.66%;
+    width: 100%;
+    border: 1px solid #515151;
+}
+#charPanel {
+    border-right: 1px solid #515151;
+    float: left;
+    position: relative;
+}
+#mobPanel {
+    border-left: 1px solid #515151;
+    float: right;
+}
+#addCharContainer, .characterContainer {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    color: #e8a00f;
+}
+#charPanel button {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid #515151;    
+}
+#addChar, .imgClass {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.9;
+    height: 75px;
+    width: 75px;
+}
+#charInfo, #addCharPanel {
+    position:absolute;
+    z-index: 2;
+    width: 16.66%;
+    min-width: 250px;
+    height: calc(100% - 16.66%);
+    display: inline-block;
+    border-right: 1px solid #515151;
+}
+.hidden {
+    opacity: 0;
+}
+#addGender, h3, #addRace, #addClass, #addCharForm #submit, #addName {
+    width: 220px;
+    margin: 0 auto 5px auto;
+    border-bottom: 1px solid #515151; 
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin: 0;
+}
+#addCharPanel h3 {
+    color: #e8a00f;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+.switch input {display:none;}
+
+
+.slider {
+    display: inline-block;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+#addCharForm input[type="checkbox"]:checked + .slider{
+    background-color: #f58fcb;
+    background-image:url(../images/ui/female.jpg);
+    background-position: 25%;
+    background-repeat: no-repeat;
+}
+#addCharForm input[type="checkbox"] + .slider {
+    background-color: #8fc9f5;
+    background-image:url(../images/ui/male.jpg);
+    background-position: 75%;
+    background-repeat: no-repeat;
+}
+
+#addCharForm input[type="checkbox"]:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+#addCharForm input[type="checkbox"]:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+span.male, span.female {
+    padding: 0;
+    margin-top: -25px;
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-block;
+    vertical-align: middle;
+}
+span.male {
+    color: #8fc9f5;
+}
+span.female {
+    color: #f58fcb;
+}
+#addRace label {
+    background-image: url(../images/ui/createRace.png);
+    cursor: pointer;
+    width: 88px;
+    text-align: center;
+    line-height: 16px;
+    color: grey;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#addRace .block, .raceSlot {
+    display: block;
+    margin: 0 auto 5px;
+}
+.raceSlot {
+    width: 200px;
+}
+#addRace input[type="radio"]:checked + label {
+    color: #1a1a1a;
+    background-image: url(../images/ui/createRacePicked.png);
+    cursor: auto;
+}
+#addClass label {
+    height: 116px;
+    width: calc(50% - 2px);
+    text-align: center;
+    opacity: 0.33;
+    color: lightgrey;
+}
+#createFighter {
+    background-image: url(../images/classes/0.png);
+}
+#createMage {
+    background-image: url(../images/classes/10.png);
+    
+}
+#createFighter, #createMage {
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+}
+#addClass input[type="radio"]:checked + label {
+    opacity: 1;
+}
+#submitCreate input {
+    border: 0;
+    padding: 0;
+    width: 67px;
+    height: 18px;
+    color: grey;
+    line-height: 18px;
+    background-image:url(../images/ui/createSubmit.jpg);
+    display: block;
+    margin: 0 auto 5px;
+}
+#submitCreate input:hover {
+    background-image:url(../images/ui/createSubmitHover.jpg);
+    
+}
+#addName {
+    display: block;
+    height: 40px;
+    color: grey;
+}
+#createCharName {
+    width: 100px;
+    vertical-align: middle;
+    text-align: right;
+    background-color: inherit;
+    border: 1px solid grey;
+    border-radius: 2px;
+}
+#addCharForm label {
+    vertical-align: middle;
+}
+
+#invContainer {
+    height: calc(100% - 280px);
+    width: 240px;
+    
+    margin-left: auto;
+    margin-right: auto;
+}
+#invEquipment, #inv {
+    background-color: #232323;
+    width: 240px;
+    height: 50%;
+    margin: 15px auto;
+    display: block;
+}
+#invEquipment td, #inv td {
+    background-blend-mode: screen;
+    display: inline-block;    
+    height: 32px;
+    width: 32px;
+    background-color: #151515;
+    margin-right: 3px;
+    margin-bottom: 3px;
+    border: 1px groove #515151;
+    
+}
+#invEquipment tr:first-of-type, #inv tr:first-of-type {
+    display: block;
+    margin-top: 15px;
+}
+#invEquipment tr:last-of-type, #inv tr:last-of-type {
+    display: block;
+    padding-bottom: 15px;
+}
+.slot1, #inv tr td:first-of-type {
+    margin-left: 15px !important;
+}
+#inv tr td:first-of-type {
+    margin-left: 6px
+}
+.slot4 {
+    margin-left: 35px !important;
+}
+
+/*****icons *****/
+td#hat, td#mask{
+    background-image: url(../images/ui/invHat.jpg);
+}
+td#helm {
+    background-image: url(../images/ui/invHelm.jpg);
+    
+}
+td#tattoo {
+    background-image: url(../images/ui/invShirt.jpg);
+    
+}
+td#lEarring, td#rEarring {
+    background-image: url(../images/ui/invEarring.jpg);
+    
+}
+td#rHand {
+    background-image: url(../images/ui/invRHand.jpg);
+    
+}
+td#chest {
+    background-image: url(../images/ui/invChest.jpg);
+    
+}
+td#lHand {
+    background-image: url(../images/ui/invLHand.jpg);
+    
+}
+td#necklace {
+    background-image: url(../images/ui/invNecklace.jpg);
+    
+}
+td#gloves {
+    background-image: url(../images/ui/invGloves.jpg);
+    
+}
+td#pants {
+    background-image: url(../images/ui/invPants.jpg);
+    
+}
+td#boots {
+    background-image: url(../images/ui/invBoots.jpg);
+    
+}
+td#rRing, td#lRing {
+    background-image: url(../images/ui/invRing.jpg);
+    
+}
+#charActivator {
+    margin: 12px auto;
+    width: 88px;
+    text-align: center;
+    color: #1a1a1a;
+    font-weight: 700;
+    line-height: 16px;
+    max-width: 100%;
+    cursor: pointer;
+}
+#charActivator.active {
+    color: grey;
+}
+
+.scrollable .viewport .overview {
+    position: inherit;
+}
+
+#combatPanel{
+    width: 66.6%;
+    position: relative;
+}
+#eBar, #pBar {
+    width: 25%;
+    height:70px;
+}
+#eBar {
+    float: right;
+    background-image: url(../images/ui/enemyHealthFrame.png), url(../images/ui/healthBG.png);
+    background-position: right, left;
+    background-repeat: no-repeat, repeat-x;
+}
+#pBar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-image: url(../images/ui/playerHealthFrame.png), url(../images/ui/healthBG.png);
+    background-position: left, right;
+    background-repeat: no-repeat, repeat-x;
+}
+#eName {
+    margin-top: 2px;
+    display: inline-block;
+    width: calc(100% - 45px);
+    text-align: right;
+    color: white;
+}
+#eLvl, #eName {
+    display: inline-block;
+}
+#eLvl {
+    float: right;
+    margin: 2px 14px 0px 0px;
+    height: 20px;
+    width: 22px;
+    text-align: center;
+    color: white;
+    line-height: 22px;
+    font-size: 11px;
+    font-weight: 700;
+}
+#pLvl {
+    display: inline-block;
+    margin: 3px 0 0 14px;
+    height: 20px;
+    width: 22px;
+    text-align: center;
+    color: white;
+    line-height: 22px;
+    font-size: 11px;
+    font-weight: 700;
+}
+#pName {
+    display: inline-block;
+    margin-left: 10px;
+    color: white;
+    text-align: center;
+}
+#pActiveHealth, #pActiveMana, #pActiveExp, #eActiveHealth, #eActiveMana, #eActiveExp {
+    margin-top: 2px;
+    background-repeat: no-repeat;
+    height: 11px;
+    text-align: center;
+    line-height: 11px;
+    font-size: x-small;
+    color: lightgray;
+    
+}
+#eActiveHealth, #eActiveMana, #eActiveExp {
+    margin-right: 14px;
+}
+#pActiveHealth, #pActiveMana, #pActiveExp {
+    margin-left: 14px;
+}
+#pActiveHealth, #eActiveHealth{
+    background-image: url(../images/ui/hpActive.jpg);
+}
+#pActiveMana, #eActiveMana{
+    background-image: url(../images/ui/mpActive.jpg);
+    
+}
+#pActiveExp, #eActiveExp{
+    background-image: url(../images/ui/expActive.jpg);
+    
+}

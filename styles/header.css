@@ -1,0 +1,33 @@
+@font-face {
+    font-family: Lineage2;
+    src: url(../fonts/la2.ttf);
+}
+.clearfix {
+	overflow: hidden;
+	width: 100%;
+}
+
+#headerContainer {
+    background-color: #151515;
+    color: goldenrod;
+    font-family: Lineage2;    
+    height: 50px;
+    border-bottom: 1px solid #515151;
+}
+#playerContainer {
+    float: right;
+    height: 100%;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+#greetings, #playerContainer input {
+    color: #515151;
+}
+#playerContainer input {
+    height: 30px;
+    line-height: 16px;
+    background-color: #151515;
+    color: #515151;
+    border: 1px solid #515151;
+}

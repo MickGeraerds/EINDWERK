@@ -1,0 +1,141 @@
+@font-face {
+    font-family: Lineage2;
+    src: url(../fonts/la2.ttf);
+}
+
+body { 
+    position:fixed;
+    padding:0;
+    margin:0;
+    top:0;
+    left:0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/ui/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #111;
+    background-position: top;
+}
+#myModal {
+    display: block;
+    font-family: Lineage2;
+}
+input {
+    font-family: sans-serif;
+}
+#myTabs, #navTabs {
+    opacity: 0.9;
+    display: block;
+    width: auto;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;    
+}
+#myTabs {
+    font-family: Lineage2;
+    margin-top: 10%;
+    background-color: #151515;
+    box-shadow: 5px 5px 2px #151515;
+}
+.titleBar, .titleBarLeft, .titleBarRight {
+    display: inline-block;
+    height: 21px;
+}
+.titleBar {
+    text-align: center;
+    width: 100%;
+    color: #aaa;
+    background-image: url(../images/ui/titleBarMiddle.jpg);
+}
+.titleBarLeft {
+    float: left;
+    background-image: url(../images/ui/titleBarLeft.jpg);
+    width: 24px;
+}
+.titleBarRight {
+    float: right;
+    background-image: url(../images/ui/titleBarRight.jpg);
+    width: 24px;
+}
+#navTabs {
+    background-color: #151515;
+}
+#navTabs li {
+    display: block;
+    width: calc(50%);
+    text-align: center;
+    font-weight: bold;
+}
+#navTabs li:nth-of-type(2) a {
+    margin-right: 0;
+}
+.nav-tabs li a {    
+    border: 1px solid transparent;
+    margin: 0px;
+}
+.nav-tabs li {
+    border-color: transparent inherit inherit;
+}
+#myTabs, .nav-tabs, .nav-tabs li, .nav-tabs li a{
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-color: transparent #313131 #313131;
+}
+#myTabs, .nav-tabs, .nav-tabs li:first-of-type, .nav-tabs li:first-of-type a {
+    border-bottom-left-radius: 4px;
+}
+#myTabs, .nav-tabs, .nav-tabs li:last-of-type , .nav-tabs li:last-of-type a {
+    border-bottom-right-radius: 4px;
+}
+.nav-tabs li a, .nav-tabs li a:hover {
+    background-color: #313131;
+    border-color: inherit;
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+    color: #337ab7;
+    background-color: #151515;
+    border-color: transparent;
+}
+#loginContainer div form {
+    margin-bottom: -1px;
+    border-width: 0px;
+    border-style: solid;
+    padding: 25px 50px 25px 50px;
+}
+.btn-login, .modal-footer button {
+    background-color: #515151;
+    color: #151515;
+    background-image: linear-gradient(to bottom, #515151 0px, #313131 100%);
+    border: 1px solid #515151;
+}
+.btn-login:hover, .modal-footer button:hover {
+    color: #aaa;
+}
+input[type="email"], input[type="text"], input[type="password"], textarea {
+    color: #151515;
+    background-color: #515151;
+    border-color: #313131;
+}
+.modal-content {
+    margin-top: 45%;
+    opacity: 0.95;
+    background-color: #151515;
+    color: #515151;
+    border: 1px solid #515151;
+}
+.modal-header {
+    padding: 0;
+    border-bottom: 0;
+}
+.modal-header button {
+    margin-right: 5px;
+}
+.modal-footer, .modal-body {
+    width: 49%;
+    display: inline-block;
+    border-top: 0;
+}
